@@ -1,3 +1,5 @@
+
+
 # First mohmoh script
 
 ## Installation
@@ -22,4 +24,10 @@ node loc.js
 ```
 
 ![none](https://i.imgur.com/U0H3iuc.jpg)
+
+## History
+2.10.23 7:30 - This script was made.
+2.10.23 11:15 - Flower announced to patch bots and im ready for this.
+
+
 
