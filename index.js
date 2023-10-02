@@ -28,7 +28,7 @@ ws.onmessage = function(e) {
           emit("c", 1);
           emit("5", 0, true);
         };
-      });
+      }, 120);
       break;
   }
 }
