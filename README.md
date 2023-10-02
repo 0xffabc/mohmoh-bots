@@ -21,5 +21,5 @@ npm init --y && npm install ws msgpack-lite
 node loc.js
 ```
 
-https://i.imgur.com/U0H3iuc.jpg
+![none](https://i.imgur.com/U0H3iuc.jpg)
 
