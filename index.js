@@ -1,13 +1,17 @@
 const { WebSocket } = require("ws");
 const { encode, decode } = require("msgpack-lite");
-const ws = new WebSocket("wss://mohmoh.onrender.com/");ws.binaryType = "arraybuffer";
+const ws = new WebSocket("wss://mohmoh.onrender.com/", 
+                         {
+                           origin: "mohmoh.onrender.com",
+                         });
+ws.binaryType = "arraybuffer";
 function emit(...a) {
   const name = a.shift();
   const packet = encode([name, a]);
   ws.send(packet);
 }
 ws.onmessage = function(e) {
-  const [packet, data] = decode(e.data);
+  const [packet, data] = decode(new Uint8Array(e.data));
   console.log(packet, data);
   switch(packet) {
     case "io-init":
